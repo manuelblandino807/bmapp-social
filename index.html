@@ -1,1 +1,87 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Profilo Social</title>
 
+<style>
+body {
+margin: 0;
+font-family: Arial;
+background: #111;
+color: white;
+display: flex;
+justify-content: center;
+align-items: center;
+height: 100vh;
+}
+
+.card {
+background: #1c1c1c;
+padding: 20px;
+border-radius: 20px;
+text-align: center;
+}
+
+.socials {
+display: flex;
+gap: 15px;
+justify-content: center;
+margin-top: 20px;
+}
+
+.socials a {
+background: white;
+padding: 10px;
+border-radius: 10px;
+}
+
+.hidden {
+display: none;
+}
+</style>
+</head>
+
+<body>
+
+<div class="card">
+<h2 id="name">Utente</h2>
+
+<div class="socials">
+<a id="instagramBtn" class="hidden" target="_blank">Instagram</a>
+<a id="tiktokBtn" class="hidden" target="_blank">TikTok</a>
+<a id="facebookBtn" class="hidden" target="_blank">Facebook</a>
+<a id="telegramBtn" class="hidden" target="_blank">Telegram</a>
+<a id="whatsappBtn" class="hidden" target="_blank">WhatsApp</a>
+</div>
+</div>
+
+<script>
+const params = new URLSearchParams(window.location.search);
+
+const name = params.get("nome") || "Utente";
+const instagram = params.get("instagram") || "";
+const tiktok = params.get("tiktok") || "";
+const facebook = params.get("facebook") || "";
+const telegram = params.get("telegram") || "";
+const whatsapp = params.get("whatsapp") || "";
+
+document.getElementById("name").textContent = name;
+
+function setupButton(id, value, prefix) {
+if (!value) return;
+const btn = document.getElementById(id);
+btn.href = prefix + value;
+btn.classList.remove("hidden");
+}
+
+setupButton("instagramBtn", instagram, "https://instagram.com/");
+setupButton("tiktokBtn", tiktok, "https://www.tiktok.com/@");
+setupButton("facebookBtn", facebook, "https://facebook.com/");
+setupButton("telegramBtn", telegram, "https://t.me/");
+setupButton("whatsappBtn", whatsapp, "https://wa.me/");
+</script>
+
+</body>
+</html>
