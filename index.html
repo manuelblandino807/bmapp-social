@@ -5,11 +5,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Profilo Social</title>
 
+<!-- ICONE -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+
 <style>
 body {
 margin: 0;
 font-family: Arial;
-background: #111;
+background: linear-gradient(180deg,#111,#000);
 color: white;
 display: flex;
 justify-content: center;
@@ -18,23 +21,35 @@ height: 100vh;
 }
 
 .card {
-background: #1c1c1c;
-padding: 20px;
+background: rgba(255,255,255,0.05);
+padding: 25px;
 border-radius: 20px;
 text-align: center;
+backdrop-filter: blur(10px);
+box-shadow: 0 0 20px rgba(0,0,0,0.4);
+}
+
+h2 {
+margin-bottom: 20px;
 }
 
 .socials {
 display: flex;
-gap: 15px;
+gap: 20px;
 justify-content: center;
-margin-top: 20px;
 }
 
 .socials a {
+font-size: 28px;
+padding: 15px;
+border-radius: 15px;
 background: white;
-padding: 10px;
-border-radius: 10px;
+color: black;
+transition: 0.3s;
+}
+
+.socials a:hover {
+transform: scale(1.1);
 }
 
 .hidden {
@@ -49,11 +64,11 @@ display: none;
 <h2 id="name">Utente</h2>
 
 <div class="socials">
-<a id="instagramBtn" class="hidden" target="_blank">Instagram</a>
-<a id="tiktokBtn" class="hidden" target="_blank">TikTok</a>
-<a id="facebookBtn" class="hidden" target="_blank">Facebook</a>
-<a id="telegramBtn" class="hidden" target="_blank">Telegram</a>
-<a id="whatsappBtn" class="hidden" target="_blank">WhatsApp</a>
+<a id="instagramBtn" class="hidden" target="_blank"><i class="fab fa-instagram"></i></a>
+<a id="tiktokBtn" class="hidden" target="_blank"><i class="fab fa-tiktok"></i></a>
+<a id="facebookBtn" class="hidden" target="_blank"><i class="fab fa-facebook"></i></a>
+<a id="telegramBtn" class="hidden" target="_blank"><i class="fab fa-telegram"></i></a>
+<a id="whatsappBtn" class="hidden" target="_blank"><i class="fab fa-whatsapp"></i></a>
 </div>
 </div>
 
