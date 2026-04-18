@@ -68,7 +68,6 @@ h2 {
 #instagramBtn { background: #E1306C; }
 #facebookBtn { background: #1877F2; }
 #tiktokBtn { background: #000000; border: 1px solid #333; }
-#telegramBtn { background: #0088cc; }
 #whatsappBtn { background: #25D366; }
 
 .footer {
@@ -96,7 +95,6 @@ h2 {
     <a id="instagramBtn" class="hidden" target="_blank"><i class="fab fa-instagram"></i></a>
     <a id="facebookBtn" class="hidden" target="_blank"><i class="fab fa-facebook-f"></i></a>
     <a id="tiktokBtn" class="hidden" target="_blank"><i class="fab fa-tiktok"></i></a>
-    <a id="telegramBtn" class="hidden" target="_blank"><i class="fab fa-telegram-plane"></i></a>
     <a id="whatsappBtn" class="hidden" target="_blank"><i class="fab fa-whatsapp"></i></a>
   </div>
 
@@ -114,7 +112,6 @@ const name = params.get("nome") || "Utente";
 const instagram = params.get("instagram") || "";
 const tiktok = params.get("tiktok") || "";
 const facebook = params.get("facebook") || "";
-const telegram = params.get("telegram") || "";
 const whatsapp = params.get("whatsapp") || "";
 
 document.getElementById("name").textContent = name;
@@ -129,7 +126,6 @@ function setupButton(id, value, prefix) {
 setupButton("instagramBtn", instagram, "https://instagram.com/");
 setupButton("facebookBtn", facebook, "https://facebook.com/");
 setupButton("tiktokBtn", tiktok, "https://www.tiktok.com/@");
-setupButton("telegramBtn", telegram, "https://t.me/");
 setupButton("whatsappBtn", whatsapp, "https://wa.me/");
 </script>
 
